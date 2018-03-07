@@ -1,6 +1,6 @@
 '''
 Sandra Dögg Kristmundsdóttir
-05.02.2018
+28.01.2018
 '''
 import pygame
 from random import *
