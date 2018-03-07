@@ -1,0 +1,6 @@
+1: Teningakastarinn Þú er staddur á heimsmeistaramóti í Yatzy en það er komið upp alvarlegt vandamál. 
+Einhver hefur gleymt öllum teningasettunum þannig að ekki er hægt að kasta neinu. Þú sem skólaður leikjaforritari sest niður 
+og forritar lausn sem kastar 5 teningum og býður upp á möguleikann að kasta þeim aftur(bara tvisvar). 
+Þú ákveður að láta forritið birta teningana í tveim röðum, tveir eru á toppnum og þrír undir. 
+Að auki setur þú kerfið þannig upp að spilari klikkar á þá teninga sem hann vill kasta aftur og klikkar svo á hnappinn “kasta aftur”. 
+Þú kemur í veg fyrir svindl með þvi t.d. að láta takkann hverfa ef spilari hefur kastað tvisvar.
