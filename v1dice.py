@@ -1,3 +1,7 @@
+'''
+Sandra Dögg Kristmundsdóttir
+05.02.2018
+'''
 import pygame
 from random import *
 pygame.init()
