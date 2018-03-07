@@ -62,14 +62,14 @@ while running:
         #lokar leiknum ef það er ýtt á escape
         if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
             running = False
-        #athuga ef það  var klikkað
+        #athuga hvort það var klikkað
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == LEFT_BUTTON:
             #fæ hnit hvar var klikkað
             x , y = event.pos
-            #fer í gegnum alla teninga til að vita hvort var klikkað á þá
+            #fer í gegnum alla teninga til að vita hvort það hafi verið ýtt á þá
             for img in imagelisti:
                 if img.collidepoint(event.pos):
-                    #ef þeir eru klikkaðir þá er þeim bætt við clickedreitir
+                    #ef þeir eru valdnir þá er þeim bætt við clickedreitir
                     #ef að þeir voru nú þegar í listanum þá eru þeir fjarlægðir
                     if img not in clickedreitir:
                         clickedreitir.append(img)
@@ -79,19 +79,19 @@ while running:
                         clickedreitir.remove(img)
                         print("Unselected dice")
                         print(len(clickedreitir),"dice selected")
-            #ef það var klikkað á reroll reitinn
+            #ef það var klikkað á kasta aftur reitinn
             if rollcheck.collidepoint(event.pos):
-                #athuga ef notandi má rúlla aftur eða ekki
+                #athuga ef notandi má kasta aftur eða ekki
                 if rollcounter<=1 and len(clickedreitir)>0:
                     rollcounter+=1
-                    #fer í gegnum listan af völdnum kössum og rúlla þeim aftur
+                    #fer í gegnum listan af völdum reitum og kastar þeim aftur
                     for image in imagelisti:
                         if image in clickedreitir:
                             clickedreitir.remove(image)
                             image=window.blit(teningalisti[randint(0,5)][0],(image[0],image[1]))
                             pygame.display.flip()
                             print("kastað")
-                #segi notanda að hann hefur ekki valið neinn reit
+                #prentar að enginn reitur var valinn
                 elif rollcounter<=1 and len(clickedreitir)==0:
                     print("Þú hefur ekki valið neina teninga til að kasta aftur!")
-pygame.quit() # When the game loop is no longer running this causes the program to quit.
+pygame.quit()
